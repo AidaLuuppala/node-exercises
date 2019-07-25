@@ -12,7 +12,7 @@ Define npm script to **package.json** for running the application:
 
 ```diff
 "scripts": {
-   + "start": "node index.js",
++    "start": "node index.js",
   },
 ```
 
@@ -52,7 +52,7 @@ Define npm script to **package.json**:
 
 ```diff
 "scripts": {
-    + "watch": "nodemon index.js",
++    "watch": "nodemon index.js",
   },
 ```
 
