@@ -91,4 +91,3 @@ var office = {
                 this.longitude = longitude;
         }
 };
-
