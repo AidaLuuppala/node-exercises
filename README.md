@@ -1,4 +1,4 @@
-# node-exercises
+# Node.js
 
 ### Initialize project
 
