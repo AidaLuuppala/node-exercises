@@ -16,7 +16,7 @@ Define npm script to **package.json** for running the application:
   },
 ```
 
-Run application with node in terminal:
+Run application with node:
 
 ```
 node index.js
@@ -32,7 +32,7 @@ npm start
 
 ### Express
 
-Define express dependency in terminal:
+Define express dependency:
 
 ```
 npm install express --save
@@ -42,7 +42,7 @@ npm install express --save
 
 ### Nodemon
 
-Define nodemon development dependency in terminal:
+Define nodemon development dependency:
 
 ```
 npm install --save-dev nodemon
@@ -56,7 +56,7 @@ Define npm script to **package.json**:
   },
 ```
 
-Start server in development mode in terminal:
+Start server in development mode:
 
 ```
 npm run watch
