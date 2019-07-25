@@ -66,13 +66,13 @@ npm run watch
 
 ### Commands for dependencies
 
-Update dependencies defined in **package.json** in terminal:
+Update dependencies defined in **package.json**:
 
 ```
 npm update
 ```
 
-Get dependencies defined in **package.json** in terminal:
+Get dependencies defined in **package.json**:
 
 ```
 npm install
