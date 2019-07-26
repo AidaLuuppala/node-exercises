@@ -64,6 +64,16 @@ npm run watch
 
 ***
 
+### MariaDB Connector
+
+Install MariaDB Connector:
+
+```
+npm install mariadb
+```
+
+***
+
 ### Commands for dependencies
 
 Update dependencies defined in **package.json**:
