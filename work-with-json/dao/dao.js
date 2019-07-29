@@ -1,21 +1,25 @@
-const mariadb = require('mariadb');
-const pool = mariadb.createPool({
-    host: 'localhost',
-    database: 'service_point_api_db',
-    user:'root',
-    password: 'password',
-    connectionLimit: 5
-});
+module.exports = {
+    insert: function(office) {
+        var mariadb = require('mariadb')
 
-exports.insertInto = async function insertInto(office) {
-    let conn;
-    try {
-        conn = await pool.getConnection();
-        const res = await conn.query("INSERT INTO office() value(?,?)", [1, "mariadb"]);
-        console.log(res); // { affectedRows: 1, insertId: 1, warningStatus: 0 }
-    } catch (err) {
-        throw err;
-    } finally {
-        if (conn) return conn.end();
+        mariadb.createConnection({ // Open a new connection                                                                                                                                           
+            host: 'localhost',
+            database: 'service_point_api_db',
+            user:'username',
+            password: 'password',
+            port: 3306
+        })
+        .then(conn => {
+            var officeId = office.id;
+            var officeNameFI = office.name_fi;
+            var officeNameSV = office.name_sv;
+            var officeDescriptionFI = office.description_fi;
+            var officeDescriptionSV = office.description_sv;
+            conn.query("INSERT INTO office(id, name_fi, name_sv, description_fi, description_sv) value (?, ?, ?, ?, ?)", [officeId, officeNameFI, officeNameSV, officeDescriptionFI, officeDescriptionSV])                                                                                                                               
+                .then(result => { // Print the results                                                                                                                                            
+                    console.log("onnistui");
+                })
+                .then(conn.destroy()) // Close the connection                                                                                                                                     
+        })
     }
-}
+}; 

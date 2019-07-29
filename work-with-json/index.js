@@ -8,6 +8,7 @@ var request = require("request")
 
 //include file with the object
 var office = require('./data/office.js');
+var dao = require('./dao/dao.js');
 
 var url = "https://api.palvelutietovaranto.suomi.fi/api/v8/ServiceChannel/organization/c5f6914f-302e-41cc-bed7-4d4215aac640"
 var url2 = "https://api.palvelutietovaranto.suomi.fi/api/v8/ServiceChannel/"
@@ -48,13 +49,12 @@ request({
                                         //console.log(office.description_fi)
                                         //set office objects to map offices with office.id as the key
                                         offices.set(office.id, office);
-                                        console.log(offices);
+                                        //console.log(offices);
+                                        //insert to database
+                                        dao.insert(office);
                                 }
                         })
                 });
         }
 })
-
-const dao = require('./dao/dao.js');
-//console.log(`${dao.insertInto(office)}`);
 
